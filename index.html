@@ -60,6 +60,14 @@
     .hero h1 em{font-style:normal;color:var(--pink)}
     .hero-lead{color:var(--muted);font-size:17px;line-height:1.9;max-width:520px;margin-bottom:32px}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+    .price-box{background:#fff;border:2px solid var(--pink);display:inline-flex;align-items:center;gap:12px;padding:10px 18px;border-radius:999px;margin-bottom:20px;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+    .price{font-size:24px;font-weight:900;color:var(--pink);line-height:1}
+    .price-note{font-size:13px;font-weight:800;color:var(--muted)}
+    .price-strip{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin:22px auto 6px;padding:16px 20px;border-radius:22px;background:var(--pink-ll);border:1px solid var(--pink-l)}
+    .price-strip strong{font-size:30px;color:var(--pink);font-weight:900}
+    .price-strip span{font-size:14px;color:var(--muted);font-weight:800}
+    .stock-note{font-size:14px;color:#b25d73;font-weight:900;margin:12px 0 0}
+    .sticky-buy{display:none}
     .hero-badges{display:flex;flex-wrap:wrap;gap:8px}
     .badge{background:#fff;color:var(--muted);padding:7px 14px;border-radius:999px;font-size:13px;font-weight:700;border:1px solid #e8e0d8}
 
@@ -212,6 +220,12 @@
       .brand{min-width:120px;font-size:17px}
       .brand-logo{width:56px;height:56px}
       .challenge-quote{font-size:17px}
+      .price-box{align-items:flex-start;flex-direction:column;border-radius:22px;gap:6px}
+      .sticky-buy{display:flex;position:fixed;bottom:12px;left:12px;right:12px;z-index:200;background:#fff;border:1px solid var(--pink-l);box-shadow:0 12px 40px rgba(0,0,0,.18);border-radius:22px;padding:10px;align-items:center;justify-content:space-between;gap:10px}
+      .sticky-buy strong{color:var(--pink);font-size:18px;line-height:1}
+      .sticky-buy span{display:block;color:var(--muted);font-size:12px;font-weight:800}
+      .sticky-buy .btn{padding:10px 14px;font-size:14px;white-space:nowrap}
+      body{padding-bottom:86px}
     }
   </style>
 </head>
@@ -235,6 +249,10 @@
       مصنوعة يدوياً بخيوط ناعمة وسميكة، بتصميم ورود بارز وألوان هادئة راقية.
       تحمي حاسوبك من الخدوش وتضيف لمسة أنثوية لا تُقاوَم — في العمل، الجامعة، أو المقهى.
     </p>
+    <div class="price-box">
+      <span class="price">299 درهم</span>
+      <span class="price-note">الدفع عند الاستلام • بدون تسبيق</span>
+    </div>
     <div class="hero-actions">
       <a class="btn btn-primary" href="#order">اطلبي واحدة الآن 🌸</a>
       <a class="btn btn-ghost" href="#details">شاهدي التفاصيل</a>
@@ -375,14 +393,19 @@
     <h2>اطلبي حقيبتكِ قبل نفاد الكمية 🌸</h2>
     <p class="muted" style="margin-bottom:0">
       أرسلي لي مقاس الحاسوب أو صورته عبر واتساب وسأخبركِ بكل التفاصيل —
-      المقاس المناسب، المدة، والثمن.
+      المقاس المناسب ومدة التجهيز. الثمن واضح: 299 درهم فقط.
     </p>
     <div class="wa-template">
       <b>رسالة جاهزة للإرسال:</b><br/>
       مرحباً، أريد طلب حقيبة الحاسوب الكروشيه من Crochettale 🌸<br/>
       مقاس حاسوبي هو: ___<br/>
-      أريد معرفة الثمن ومدة التجهيز.
+      أريد تأكيد الطلب بسعر 299 درهم ومدة التجهيز.
     </div>
+    <div class="price-strip">
+      <strong>299 درهم</strong>
+      <span>الدفع عند الاستلام • الكمية محدودة</span>
+    </div>
+    <p class="stock-note">احجزي قطعتك الآن قبل نفاد الألوان المتوفرة</p>
     <p style="font-size:16px;color:#3a6b35;font-weight:900;margin:10px 0 18px">واتساب: +212 658 508 091</p>
     <a class="btn btn-wa" href="https://wa.me/212658508091?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%AD%D9%82%D9%8A%D8%A8%D8%A9%20%D8%A7%D9%84%D8%AD%D8%A7%D8%B3%D9%88%D8%A8%20%D8%A7%D9%84%D9%83%D8%B1%D9%88%D8%B4%D9%8A%D9%87%20%D9%85%D9%86%20Crochettale%20%F0%9F%8C%B8" target="_blank">
       💬 الطلب عبر واتساب
@@ -390,6 +413,11 @@
     <p style="font-size:13px;color:#a09288;margin-top:16px">الدفع عند الاستلام — لا حاجة لأي دفع مسبق</p>
   </div>
 </section>
+
+<div class="sticky-buy">
+  <div><strong>299 درهم</strong><span>الدفع عند الاستلام</span></div>
+  <a class="btn btn-wa" href="https://wa.me/212658508091?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%AD%D9%82%D9%8A%D8%A8%D8%A9%20%D8%A7%D9%84%D8%AD%D8%A7%D8%B3%D9%88%D8%A8%20%D8%A7%D9%84%D9%83%D8%B1%D9%88%D8%B4%D9%8A%D9%87%20%D9%85%D9%86%20Crochettale%20%D8%A8%D8%B3%D8%B9%D8%B1%20299%20%D8%AF%D8%B1%D9%87%D9%85" target="_blank">اطلبي الآن</a>
+</div>
 
 <footer>
   <strong>✿ Crochettale</strong> — مصنوع يدوياً بحب وإتقان 🌸<br/>
