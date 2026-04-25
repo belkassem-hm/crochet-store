@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>حقيبة حاسوب كروشيه | Handmade Laptop Sleeve</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Tahoma, Arial, sans-serif;
+      background: #fff8ef;
+      color: #2f2923;
+      line-height: 1.8;
+    }
+    a { text-decoration: none; }
+    .hero {
+      min-height: 100vh;
+      padding: 22px;
+      background:
+        radial-gradient(circle at top left, #f8cbd8 0, transparent 32%),
+        radial-gradient(circle at bottom right, #d6edc4 0, transparent 30%),
+        #fff8ef;
+    }
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,255,255,.78);
+      padding: 12px 18px;
+      border-radius: 999px;
+      box-shadow: 0 8px 30px rgba(0,0,0,.07);
+    }
+    .brand { font-weight: 900; font-size: 20px; }
+    .container {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      padding: 70px 0 35px;
+    }
+    .tag {
+      display: inline-block;
+      background: white;
+      color: #2f6b38;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-weight: 800;
+      box-shadow: 0 8px 20px rgba(0,0,0,.06);
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: clamp(36px, 5vw, 68px);
+      line-height: 1.15;
+      margin: 0;
+      letter-spacing: -1px;
+    }
+    .lead {
+      color: #6f655d;
+      font-size: 20px;
+      margin: 24px 0;
+      max-width: 570px;
+    }
+    .buttons { display: flex; gap: 13px; flex-wrap: wrap; margin-top: 25px; }
+    .btn {
+      border: none;
+      border-radius: 999px;
+      padding: 15px 26px;
+      font-size: 17px;
+      font-weight: 900;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .primary { background: #2f6b38; color: white; box-shadow: 0 12px 25px rgba(47,107,56,.24); }
+    .secondary { background: white; color: #2f6b38; border: 1px solid #dce8d7; }
+    .hero-card {
+      position: relative;
+      background: white;
+      padding: 14px;
+      border-radius: 34px;
+      box-shadow: 0 25px 80px rgba(0,0,0,.18);
+      transform: rotate(-1deg);
+    }
+    .hero-card img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      border-radius: 26px;
+      display: block;
+    }
+    .floating {
+      position: absolute;
+      bottom: 28px;
+      right: 28px;
+      background: rgba(255,255,255,.92);
+      border-radius: 22px;
+      padding: 14px 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.14);
+      font-weight: 900;
+    }
+    .badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .badge { background: white; padding: 8px 14px; border-radius: 999px; color: #60564d; font-weight: 700; }
+    section { padding: 75px 22px; }
+    .section-inner { max-width: 1150px; margin: auto; }
+    .center { text-align: center; }
+    h2 { font-size: clamp(30px, 4vw, 50px); line-height: 1.2; margin: 0 0 15px; }
+    .muted { color: #71675f; font-size: 18px; }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 45px;
+    }
+    .feature {
+      background: white;
+      border-radius: 28px;
+      padding: 28px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
+    }
+    .icon {
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 15px;
+      border-radius: 18px;
+      background: #f7d3dc;
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+    }
+    .gallery-section { background: white; }
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 42px;
+      align-items: center;
+    }
+    .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .gallery img {
+      width: 100%;
+      height: 430px;
+      object-fit: cover;
+      border-radius: 30px;
+      box-shadow: 0 15px 40px rgba(0,0,0,.11);
+    }
+    .gallery img:first-child { margin-top: 35px; }
+    .list { display: grid; gap: 12px; margin-top: 24px; }
+    .list div {
+      background: #fff8ef;
+      padding: 13px 16px;
+      border-radius: 18px;
+      font-weight: 800;
+    }
+    .green-box {
+      background: #2f6b38;
+      color: white;
+      border-radius: 34px;
+      padding: 46px 30px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(47,107,56,.22);
+    }
+    .green-box p { color: rgba(255,255,255,.82); }
+    .order {
+      max-width: 820px;
+      margin: auto;
+      background: white;
+      padding: 45px 28px;
+      border-radius: 34px;
+      text-align: center;
+      box-shadow: 0 16px 55px rgba(0,0,0,.10);
+    }
+    .whatsapp-text {
+      margin: 24px auto;
+      max-width: 500px;
+      background: #fff8ef;
+      padding: 18px;
+      border-radius: 24px;
+      text-align: right;
+      color: #675d55;
+    }
+    footer { text-align: center; padding: 25px; color: #7b7168; }
+    @media (max-width: 850px) {
+      .container, .split, .features, .green-box { grid-template-columns: 1fr; }
+      .hero-card img { height: 420px; }
+      .gallery { grid-template-columns: 1fr; }
+      .gallery img, .gallery img:first-child { height: 360px; margin-top: 0; }
+      .nav a { display: none; }
+      .buttons { justify-content: center; }
+      .hero-text { text-align: center; }
+      .lead { margin-left: auto; margin-right: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="nav">
+      <div class="brand">✿ Crochet Atelier</div>
+      <a class="btn primary" href="#order">أطلبي الآن</a>
+    </div>
+
+    <div class="container">
+      <div class="hero-text">
+        <div class="tag">قطعة يدوية فريدة وليست منتجاً عادياً</div>
+        <h1>حقيبة حاسوب كروشيه تجعل جهازك يبدو أنيقاً قبل أن تفتحه</h1>
+        <p class="lead">مصنوعة يدوياً بخيوط ناعمة وسميكة، بتصميم ورود بارز وألوان هادئة. تحمي الحاسوب من الخدوش وتضيف لمسة أنثوية راقية في العمل، الجامعة أو المقهى.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#order">أريد واحدة الآن</a>
+          <a class="btn secondary" href="#details">شاهدي التفاصيل</a>
+        </div>
+        <div class="badges">
+          <span class="badge">✓ مناسبة للحاسوب والتابلت</span>
+          <span class="badge">✓ صناعة يدوية</span>
+          <span class="badge">✓ هدية ممتازة</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <img src="product-1.jpg" alt="حقيبة حاسوب كروشيه" />
+        <div class="floating">★★★★★<br/>تصميم يلفت الانتباه</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="details">
+    <div class="section-inner center">
+      <h2>لماذا هذه الحقيبة بالضبط؟</h2>
+      <p class="muted">لأنها تجمع بين الجمال، الحماية، والندرة. كل قطعة لها روحها الخاصة ولا تشبه حقائب السوق المكررة.</p>
+      <div class="features">
+        <div class="feature"><div class="icon">♡</div><h3>إحساس يدوي دافئ</h3><p>ملمس ناعم وتصميم بارز يعطي للحاسوب مظهراً لطيفاً وراقياً.</p></div>
+        <div class="feature"><div class="icon">✓</div><h3>حماية من الخدوش</h3><p>طبقة كروشيه سميكة تساعد على حماية الجهاز داخل الحقيبة اليومية.</p></div>
+        <div class="feature"><div class="icon">✿</div><h3>قطعة مميزة</h3><p>مثالية لمن يحب المنتجات المختلفة، الهادئة، والبعيدة عن التصاميم العادية.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="section-inner split">
+      <div class="gallery">
+        <img src="product-2.jpg" alt="تفاصيل الحقيبة" />
+        <img src="product-1.jpg" alt="حقيبة كروشيه" />
+      </div>
+      <div>
+        <h2>ليست فقط حقيبة… إنها إكسسوار يومي</h2>
+        <p class="muted">تخيلي دخولك للعمل أو الجامعة وحاسوبك داخل حقيبة مصنوعة يدوياً بهذا الشكل. قطعة بسيطة، لكنها تقول الكثير عن ذوقك.</p>
+        <div class="list">
+          <div>✓ خيوط سميكة وناعمة بملمس مريح</div>
+          <div>✓ نقشة وردية بارزة مع أوراق خضراء</div>
+          <div>✓ ألوان هادئة تناسب أغلب الإطلالات</div>
+          <div>✓ يمكن طلب المقاس حسب حجم الحاسوب</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-inner green-box">
+      <div><h3>هدية لا تُنسى</h3><p>مناسبة لصديقة، أخت، زوجة أو طالبة تحب الأشياء اللطيفة.</p></div>
+      <div><h3>طلب سهل</h3><p>تواصلي عبر واتساب، اختاري المقاس، ثم يتم تجهيز القطعة.</p></div>
+      <div><h3>إنتاج محدود</h3><p>لأنها صناعة يدوية، الكمية محدودة وكل قطعة تأخذ وقتها.</p></div>
+    </div>
+  </section>
+
+  <section id="order">
+    <div class="order">
+      <h2>اطلبي حقيبتك قبل نفاد الكمية</h2>
+      <p class="muted">أرسلي لنا مقاس الحاسوب أو صورته، وسنخبرك بالمقاس المناسب والمدة اللازمة للتجهيز. يمكن أيضاً طلب ألوان خاصة حسب ذوقك.</p>
+      <div class="whatsapp-text">
+        <b>رسالة جاهزة للواتساب:</b><br/>
+        مرحباً، أريد طلب حقيبة الحاسوب الكروشيه. مقاس حاسوبي هو: ___ وأريد معرفة الثمن ومدة التجهيز.
+      </div>
+      <a class="btn primary" href="https://wa.me/212600000000?text=مرحبا، أريد طلب حقيبة الحاسوب الكروشيه" target="_blank">الطلب عبر واتساب</a>
+      <p style="font-size:13px;color:#8a8178;margin-top:15px;">ملاحظة: يجب تغيير رقم الواتساب إلى رقمك الحقيقي.</p>
+    </div>
+  </section>
+
+  <footer>© Crochet Atelier — Handmade with love</footer>
+</body>
+</html>
